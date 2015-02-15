@@ -76,8 +76,8 @@ public class VentanaPaint extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        botonCirculo = new javax.swing.JButton();
+        botonCuadrado = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         jButton4.setText("Aceptar");
@@ -149,9 +149,14 @@ public class VentanaPaint extends javax.swing.JFrame {
             .addGap(0, 498, Short.MAX_VALUE)
         );
 
-        jButton1.setText("Circulo");
+        botonCirculo.setText("Circulo");
 
-        jButton2.setText("Cuadrado");
+        botonCuadrado.setText("Cuadrado");
+        botonCuadrado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                botonCuadradoMousePressed(evt);
+            }
+        });
 
         jButton3.setText("Color");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -167,8 +172,8 @@ public class VentanaPaint extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonCuadrado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonCirculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -180,9 +185,9 @@ public class VentanaPaint extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonCirculo, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonCuadrado, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(159, 159, 159)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -192,7 +197,7 @@ public class VentanaPaint extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+ 
     private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
         // Se empieza a dibujar la linea.
         //Asi que alamceno la
@@ -202,8 +207,7 @@ public class VentanaPaint extends javax.swing.JFrame {
         linea.y2 = evt.getY();
         //apunta al jPanel
         Graphics2D g2 = (Graphics2D) jPanel1.getGraphics();
-        g2.draw(linea);
-        
+        g2.draw(linea);   
     }//GEN-LAST:event_jPanel1MousePressed
 
     private void jPanel1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseReleased
@@ -218,8 +222,7 @@ public class VentanaPaint extends javax.swing.JFrame {
         //apunta al jPanel.
         g2 = (Graphics2D) jPanel1.getGraphics();
         //borro el jPanel con lo que hay en el buffer.
-        g2.drawImage(buffer, 0,0, null);
-        
+        g2.drawImage(buffer, 0,0, null);    
     }//GEN-LAST:event_jPanel1MouseReleased
 
     private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
@@ -232,13 +235,10 @@ public class VentanaPaint extends javax.swing.JFrame {
         linea.y2 = evt.getY();
         
         //pinto la linea en el jPenal
-        float dash[] = {10.0f};
-        g2.setStroke(new BasicStroke(3.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10.0f, dash, 0.0f));
-        g2.setColor(colorSeleccionado);
-        g2.draw(linea);
-        
-       
-        
+        float dash[] = {5.0f};
+        g2.setStroke(new BasicStroke(1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10.0f, dash, 0.0f));
+        g2.setColor(colorSeleccionado); 
+        g2.draw(linea);   
     }//GEN-LAST:event_jPanel1MouseDragged
 
     private void jButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MousePressed
@@ -256,6 +256,11 @@ public class VentanaPaint extends javax.swing.JFrame {
         // TODO add your handling code here:
         jDialog1.setVisible(false);
     }//GEN-LAST:event_jButton5MousePressed
+
+    private void botonCuadradoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCuadradoMousePressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_botonCuadradoMousePressed
 
     /**
      * @param args the command line arguments
@@ -293,8 +298,8 @@ public class VentanaPaint extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton botonCirculo;
+    private javax.swing.JButton botonCuadrado;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
