@@ -348,7 +348,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 linea.y1 = evt.getY();
                 linea.y2 = evt.getY();
   
-                //para terminar el primer caso lo hacemos con un "break"
                 break;
             
             //nombramos el segundo caso ("2) y metemos en el lo que queremos
@@ -363,7 +362,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 circulo.width = evt.getX();
                 circulo.height = evt.getY();
 
-                //para terminar el segundo caso hacemos otro "break"
                 break;
                 
             case 3:
@@ -376,7 +374,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 rectangulo.height = evt.getY();
                 rectangulo.width = evt.getX();
 
-                //para terminar el tercer caso hacemos otro "break"
                 break;
                 
             case 4:
@@ -387,7 +384,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 linea.x2 = evt.getX();
                 linea.y2 = evt.getY();
 
-                //para terminar el cuarto case hacemos otro "break"
                 break;
                 
             case 5:
@@ -398,7 +394,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 circulo.y = evt.getY();
                 circulo.height = evt.getY();
 
-                //para terminar el quinto case hacemos otro "break"
                 break;
                 
             case 6:
@@ -409,7 +404,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 rectangulo.height = evt.getY();
                 rectangulo.width = evt.getX();
 
-                //para terminar el sexto case hacemos otro "break"
                 break;
                 
             case 7:
@@ -420,7 +414,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 circulo.y = evt.getY();
                 circulo.height = evt.getY();
   
-                //para terminar el séptimo case hacemos otro "break"
                 break;
                 
             case 8:
@@ -431,7 +424,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 rectangulo.width = evt.getX();
                 rectangulo.height = evt.getY();
  
-                //para terminar el octavo case hacemos otro "break"
                 break;
  
         }    
@@ -466,7 +458,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 //y pinto la linea
                 g2.draw(linea);
 
-                //hacemos un "break" para pasar al siguiente case
                 break;
             
             case 2:
@@ -483,7 +474,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 //y pinto el círculo
                 g2.draw(circulo);
 
-                //hacemos un "break" para pasar al siguiente case
                 break;
                 
             case 3:
@@ -500,7 +490,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 //y pinto el rectángulo
                 g2.draw(rectangulo);
 
-                //hacemos un "break" para pasar al siguiente case
                 break;
                 
             case 4:
@@ -517,8 +506,7 @@ public class ventanaPaint extends javax.swing.JFrame {
                 
                 //pinto la linea
                 g2.draw(linea);
- 
-                //hacemos un "break" para pasar al siguiente case
+
                 break;
                 
             case 5:
@@ -536,7 +524,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 //pinto el círculo
                 g2.draw(circulo);
 
-                //hacemos un "break" para pasar al siguiente case
                 break;
                 
             case 6:
@@ -554,7 +541,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 //pinto el círculo
                 g2.draw(rectangulo);
    
-                //hacemos un "break" para pasar al siguiente case
                 break;
                 
             case 7:
@@ -572,7 +558,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 //pinto el círculo relleno
                 g2.draw(circulo);
 
-                //hacemos un "break" para pasar al siguiente case
                 break;
                 
             case 8:
@@ -590,7 +575,6 @@ public class ventanaPaint extends javax.swing.JFrame {
                 //pinto el rectangulo relleno
                 g2.draw(rectangulo);
 
-                //hacemos un "break" para pasar al siguiente case
                 break;
  
         }
