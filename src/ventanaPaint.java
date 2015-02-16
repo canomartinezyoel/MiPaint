@@ -699,7 +699,7 @@ public class ventanaPaint extends javax.swing.JFrame {
     }//GEN-LAST:event_CambiaColorMousePressed
 
     private void jButton4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MousePressed
-        //el usuario ha elegido un color
+        //Se acepta el color seleccionado.
         colorSeleccionado = jColorChooser1.getColor();
         jDialog1.setVisible(false);
         
@@ -710,47 +710,47 @@ public class ventanaPaint extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5MousePressed
 
     private void LineaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LineaMousePressed
-        //en este caso se ejecuta el "case 1"
+        
         swt = 1;
     }//GEN-LAST:event_LineaMousePressed
 
     private void RectanguloMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RectanguloMousePressed
-        //en este caso se ejecuta el "case 3"
+
         swt = 3;
     }//GEN-LAST:event_RectanguloMousePressed
 
     private void LineaDiscontinuaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LineaDiscontinuaMousePressed
-        //en este caso se ejecuta el "case 4"
+
         swt = 4;
     }//GEN-LAST:event_LineaDiscontinuaMousePressed
 
     private void CirculoDiscontinuoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoDiscontinuoMousePressed
-        //en este caso se ejecuta el "case 5"
+
         swt = 5;
     }//GEN-LAST:event_CirculoDiscontinuoMousePressed
 
     private void RectanguloDiscontinuoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RectanguloDiscontinuoMousePressed
-        //en este caso se ejecuta el "case 6"
+
         swt = 6;
     }//GEN-LAST:event_RectanguloDiscontinuoMousePressed
 
     private void CirculoRellenoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoRellenoMousePressed
-        //en este caso se ejecuta el "case 7"
+
         swt = 7;
     }//GEN-LAST:event_CirculoRellenoMousePressed
 
     private void RectanguloColorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RectanguloColorMousePressed
-        //en este caso se ejecuta el "case 8"
+
         swt = 8;
     }//GEN-LAST:event_RectanguloColorMousePressed
 
     private void CirculoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoMousePressed
-        //en este caso se ejecuta el "case 2"
+
         swt = 2;
     }//GEN-LAST:event_CirculoMousePressed
 
     private void ControlGrosorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlGrosorMousePressed
-        //este método controla el grosor
+        //Controla el grosor
         Graphics2D g2 = (Graphics2D) jPanel1.getGraphics();
         
         g2.draw(linea);
