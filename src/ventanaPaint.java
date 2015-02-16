@@ -359,8 +359,8 @@ public class ventanaPaint extends javax.swing.JFrame {
                 //almaceno en x1 y1 el punto inicial y en width y height
                 //el punto final de las coordenadas x e y respectivamente
                 circulo.x = evt.getX();
-                circulo.width = evt.getX();
                 circulo.y = evt.getY();
+                circulo.width = evt.getX();
                 circulo.height = evt.getY();
 
                 //para terminar el segundo caso hacemos otro "break"
@@ -471,8 +471,8 @@ public class ventanaPaint extends javax.swing.JFrame {
             
             case 2:
                 //para el segundo case lo hacemos con el círculo
-                circulo.width = evt.getX();
-                circulo.height = evt.getY();
+                circulo.width = evt.getX() - circulo.x;
+                circulo.height = evt.getY() - circulo.y;
                 
                 //añado el mismo código anterior para el grosor
                 g2.setStroke(new BasicStroke(ControlGrosor.getValue()));
@@ -488,8 +488,8 @@ public class ventanaPaint extends javax.swing.JFrame {
                 
             case 3:
                 //para el tercer case lo hacemos con el rectángulo
-                rectangulo.height = evt.getY();
-                rectangulo.width = evt.getX();
+                rectangulo.height = evt.getY() - rectangulo.y;
+                rectangulo.width = evt.getX() - rectangulo.x;
                 
                 //añado el mismo código anterior para el grosor
                 g2.setStroke(new BasicStroke(ControlGrosor.getValue()));
@@ -620,9 +620,10 @@ public class ventanaPaint extends javax.swing.JFrame {
 
                 break;
                 
-            case 2:
-                circulo.height = evt.getY();
-                circulo.width = evt.getX();
+            case 2: 
+                
+                //circulo.height = evt.getY();
+                //circulo.width = evt.getX();
 
                 //pinto el círculo en el buffer
                 g2.setStroke(new BasicStroke(ControlGrosor.getValue()));
@@ -633,8 +634,8 @@ public class ventanaPaint extends javax.swing.JFrame {
                 break;
                 
             case 3:
-                rectangulo.height = evt.getY();
-                rectangulo.width = evt.getX();
+                //rectangulo.height = evt.getY();
+                //rectangulo.width = evt.getX();
 
                 //pinto la linea en el buffer
                 g2.setStroke(new BasicStroke(ControlGrosor.getValue()));
