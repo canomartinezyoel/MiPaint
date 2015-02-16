@@ -96,7 +96,7 @@ public class ventanaPaint extends javax.swing.JFrame {
         CirculoDiscontinuo = new javax.swing.JButton();
         RectanguloDiscontinuo = new javax.swing.JButton();
         CirculoRelleno = new javax.swing.JButton();
-        RectanguloRelleno = new javax.swing.JButton();
+        RectanguloColor = new javax.swing.JButton();
         Circulo = new javax.swing.JButton();
         ControlGrosor = new javax.swing.JSlider();
         CambiaColor = new javax.swing.JButton();
@@ -173,7 +173,6 @@ public class ventanaPaint extends javax.swing.JFrame {
         );
 
         Linea.setBackground(new java.awt.Color(255, 255, 255));
-        Linea.setForeground(new java.awt.Color(0, 51, 255));
         Linea.setText("Linea");
         Linea.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Linea.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -183,7 +182,6 @@ public class ventanaPaint extends javax.swing.JFrame {
         });
 
         Rectangulo.setBackground(new java.awt.Color(255, 255, 255));
-        Rectangulo.setForeground(new java.awt.Color(153, 0, 153));
         Rectangulo.setText("Rectángulo");
         Rectangulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Rectangulo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -193,7 +191,6 @@ public class ventanaPaint extends javax.swing.JFrame {
         });
 
         LineaDiscontinua.setBackground(new java.awt.Color(255, 255, 255));
-        LineaDiscontinua.setForeground(new java.awt.Color(0, 255, 255));
         LineaDiscontinua.setText("Linea Disc.");
         LineaDiscontinua.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         LineaDiscontinua.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -203,7 +200,6 @@ public class ventanaPaint extends javax.swing.JFrame {
         });
 
         CirculoDiscontinuo.setBackground(new java.awt.Color(255, 255, 255));
-        CirculoDiscontinuo.setForeground(new java.awt.Color(255, 102, 102));
         CirculoDiscontinuo.setText("Círculo Dis.");
         CirculoDiscontinuo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CirculoDiscontinuo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,7 +209,6 @@ public class ventanaPaint extends javax.swing.JFrame {
         });
 
         RectanguloDiscontinuo.setBackground(new java.awt.Color(255, 255, 255));
-        RectanguloDiscontinuo.setForeground(new java.awt.Color(51, 255, 0));
         RectanguloDiscontinuo.setText("Rectángulo Dis.");
         RectanguloDiscontinuo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         RectanguloDiscontinuo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -224,7 +219,7 @@ public class ventanaPaint extends javax.swing.JFrame {
 
         CirculoRelleno.setBackground(new java.awt.Color(255, 255, 255));
         CirculoRelleno.setForeground(new java.awt.Color(0, 51, 0));
-        CirculoRelleno.setText("Círculo Relleno");
+        CirculoRelleno.setText("Círculo Color");
         CirculoRelleno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CirculoRelleno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -232,18 +227,16 @@ public class ventanaPaint extends javax.swing.JFrame {
             }
         });
 
-        RectanguloRelleno.setBackground(new java.awt.Color(255, 255, 255));
-        RectanguloRelleno.setForeground(new java.awt.Color(102, 102, 102));
-        RectanguloRelleno.setText("Réctangulo Relleno");
-        RectanguloRelleno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        RectanguloRelleno.addMouseListener(new java.awt.event.MouseAdapter() {
+        RectanguloColor.setBackground(new java.awt.Color(255, 255, 255));
+        RectanguloColor.setText("Réctangulo Color");
+        RectanguloColor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        RectanguloColor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                RectanguloRellenoMousePressed(evt);
+                RectanguloColorMousePressed(evt);
             }
         });
 
         Circulo.setBackground(new java.awt.Color(255, 255, 255));
-        Circulo.setForeground(new java.awt.Color(255, 0, 51));
         Circulo.setText("Círculo");
         Circulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Circulo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -283,7 +276,7 @@ public class ventanaPaint extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(RectanguloRelleno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(RectanguloColor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Linea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Rectangulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(CirculoDiscontinuo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -307,15 +300,18 @@ public class ventanaPaint extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CambiaColor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ControlGrosor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CambiaColor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ControlGrosor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(Circulo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
                         .addComponent(Linea, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Circulo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(Rectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -327,10 +323,7 @@ public class ventanaPaint extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(CirculoRelleno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(RectanguloRelleno, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(RectanguloColor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -761,10 +754,10 @@ public class ventanaPaint extends javax.swing.JFrame {
         swt = 7;
     }//GEN-LAST:event_CirculoRellenoMousePressed
 
-    private void RectanguloRellenoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RectanguloRellenoMousePressed
+    private void RectanguloColorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RectanguloColorMousePressed
         //en este caso se ejecuta el "case 8"
         swt = 8;
-    }//GEN-LAST:event_RectanguloRellenoMousePressed
+    }//GEN-LAST:event_RectanguloColorMousePressed
 
     private void CirculoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoMousePressed
         //en este caso se ejecuta el "case 2"
@@ -824,8 +817,8 @@ public class ventanaPaint extends javax.swing.JFrame {
     private javax.swing.JButton Linea;
     private javax.swing.JButton LineaDiscontinua;
     private javax.swing.JButton Rectangulo;
+    private javax.swing.JButton RectanguloColor;
     private javax.swing.JButton RectanguloDiscontinuo;
-    private javax.swing.JButton RectanguloRelleno;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JColorChooser jColorChooser1;
